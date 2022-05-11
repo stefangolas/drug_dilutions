@@ -11,5 +11,5 @@ This is a PyHamilton library for dispensing 2-fold serial dilutions of 2 differe
 
 
 4. The script then runs a dispense routine which automatically determines implementation details such as tip pick up and refilling tips from source wells.</br>
-<img src="https://github.com/stefangolas/drug_dilutions/blob/master/imgs/plas23.gif" width="480"/>
+<img src="https://github.com/stefangolas/drug_dilutions/blob/master/imgs/plas23.gif" width="360"/>
 
