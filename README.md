@@ -4,7 +4,7 @@ This is a PyHamilton library for dispensing 2-fold serial dilutions of 2 differe
 </br>
 
 1. The user runs the main script by running `py dispense_dilutions_2rep.py` with an optional `--make i j` flag where `i` and `j` represent source wells for concentrated drug reagent in a 96-well plate. If `--make i j` is passed then the robot will dispense from these two wells into the respective starting wells for each drug diluton series. If not, the script will assume the user has performed this step manually.</br>
-</br>
+
 2. Once the initial well for each dilution series is loaded with its drug, the robot performs serial 2-fold dilutions.
 <img src="https://github.com/stefangolas/drug_dilutions/blob/master/imgs/bunguloj3.gif" width="280"/>
 </br>
