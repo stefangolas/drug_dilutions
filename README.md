@@ -1,6 +1,10 @@
 # Drug dilutions
-This is a PyHamilton library for dispensing serial 2-fold dilutions of 2 different therapeutic drugs onto 384-well plates and then combining these into one 384-well plate with quad-pinning for combinatorial dosage screening. </br>
+This is a PyHamilton library for dispensing 2-fold serial dilutions of 2 different therapeutic drugs onto 384-well plates and then combining these into one 384-well plate with quad-pinning for combinatorial dosage screening. </br>
 
-The main script `py dispense_dilutions_2rep.py` reads csv files containing the dose patterns on each drug plate represented visually in a 2D matrix.</br>
+The user runs the main script by running `py dispense_dilutions_2rep.py` with an optional `--make i j` flag where `i` and `j` represent source wells for concentrated drug reagent in a 96-well plate. If `--make i j` is passed then the robot will dispense from these two wells into the respective starting wells for each drug diluton series. If not, the script will assume the user has performed this step manually.</br>
 
-The script then automatically determines a time-efficient pattern for dispensing to the target plates and autonomously performs this dispense routine independent of user specifications</br>
+Once the initial well for each dilution series is loaded with its drug, the robot performs serial 2-fold dilutions.
+
+The script then reads csv files containing the dose patterns for each target plate represented visually in a 2D matrix and calculates a time-efficient set of dispense series to load each well as specified.</br>
+
+The script then runs a dispense routine which automatically determines implementation details such as tip pick up and refilling tips from source wells.</br>
