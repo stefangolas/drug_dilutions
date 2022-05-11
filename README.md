@@ -8,3 +8,4 @@ This is a PyHamilton library for dispensing 2-fold serial dilutions of 2 differe
 3. The script then reads csv files containing the dose patterns for each target plate represented visually in a 2D matrix and calculates a time-efficient set of dispense series to load each well as specified.</br>
 
 4. The script then runs a dispense routine which automatically determines implementation details such as tip pick up and refilling tips from source wells.</br>
+![alt text](https://github.com/stefangolas/drug_dilutions/blob/master/imgs/plas2.gif)
