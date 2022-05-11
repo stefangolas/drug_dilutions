@@ -1,6 +1,5 @@
 # Drug dilutions
 <img src="https://github.com/stefangolas/drug_dilutions/blob/master/imgs/colors.png" width="320"/>
-</br>
 This is a PyHamilton library for dispensing 2-fold serial dilutions of 2 different therapeutic drugs onto 384-well plates and then combining these into one 384-well plate with quad-pinning for combinatorial dosage screening. </br>
 </br>
 
