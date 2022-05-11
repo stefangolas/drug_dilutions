@@ -17,3 +17,5 @@ This is a PyHamilton library for dispensing 2-fold serial dilutions of 2 differe
 4. The script then runs a dispense routine which automatically determines implementation details such as tip pick up and refilling tips from source wells.</br>
 <img src="https://github.com/stefangolas/drug_dilutions/blob/master/imgs/plas23.gif" width="210"/>
 </br>
+
+5. Finally, the reagents in the first plate are added to the second plate using the 96-channel head for quad-pinning.
