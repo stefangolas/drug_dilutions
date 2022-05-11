@@ -9,7 +9,7 @@ This is a PyHamilton library for dispensing 2-fold serial dilutions of 2 differe
 <img src="https://github.com/stefangolas/drug_dilutions/blob/master/imgs/bunguloj3.gif" width="280"/>
 </br>
 
-3. The script then reads csv files containing the dose patterns for each target plate represented visually in a 2D matrix and calculates a time-efficient set of dispense series to load each well as specified.</br> 
+3. The script then reads csv files `drug_a_plate.csv` and `drug_b_plate.csv` containing the dose patterns for each target plate represented visually in a 2D matrix and calculates a time-efficient set of dispense series to load each well as specified.</br> 
 <img src="https://github.com/stefangolas/drug_dilutions/blob/master/imgs/hamiltonstar5.png" width="420"/>
 </br>
 
