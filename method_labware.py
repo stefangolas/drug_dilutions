@@ -22,6 +22,8 @@ waste = layout_item(lay_mgr, Tip96, 'ht_hw_96washdualchamber2_0001')
 dilution_tips = layout_item(lay_mgr, Tip96, 'dilution_tips')
 pinning_tips = layout_item(lay_mgr, Tip96, 'pinning_tips')
 drug_a_tips = layout_item(lay_mgr, Tip96, 'drug_a_tips')
+drug_b_tips = layout_item(lay_mgr, Tip96, 'drug_b_tips')
+
 drug_tips_list = [[(drug_a_tips, idx)] + [None]*7 for idx in range(96)]
 
 def drug_tips_iter():
