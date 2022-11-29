@@ -31,30 +31,32 @@ with open('drug_source.csv', newline='') as csvfile:
 
 source_dict_a = {'x': {'Vessel':(dilution_plate, [0,1,2,3,4,5,6,7]),
                      'Volume':20},
-               '9': {'Vessel':(dilution_plate, [9]),
+               '10': {'Vessel':(dilution_plate, [8]),
                      'Volume':20},
-               '7': {'Vessel':(dilution_plate, [10]),
+               '8': {'Vessel':(dilution_plate, [9]),
                      'Volume':20},
-               '5': {'Vessel':(dilution_plate, [11]),
+               '6': {'Vessel':(dilution_plate, [10]),
                      'Volume':20},
-               '3': {'Vessel':(dilution_plate, [12]),
+               '4': {'Vessel':(dilution_plate, [11]),
                      'Volume':20},
-               '1': {'Vessel':(dilution_plate, [13]),
+               '2': {'Vessel':(dilution_plate, [12]),
                      'Volume':20},
-               '10': {'Vessel':(dilution_plate, [16]),
+               '9': {'Vessel':(dilution_plate, [16]),
                      'Volume':20},        
-               '8': {'Vessel':(dilution_plate, [17]),
+               '7': {'Vessel':(dilution_plate, [17]),
                      'Volume':20},
-               '6': {'Vessel':(dilution_plate, [18]),
+               '5': {'Vessel':(dilution_plate, [18]),
                      'Volume':20}, 
-               '4': {'Vessel':(dilution_plate, [19]),
+               '3': {'Vessel':(dilution_plate, [19]),
                      'Volume':20}, 
-               '2': {'Vessel':(dilution_plate, [20]),
+               '1': {'Vessel':(dilution_plate, [20]),
                      'Volume':20}, 
                      
                }
 
-source_dict_b = {k:{'Vessel':(dilution_plate, [v['Vessel'][1][0]+16]), 'Volume':v['Volume']} if k!='x' else v for k, v in source_dict_a.items()}
+source_dict_b = {str(11-i):{'Vessel': (dilution_plate, list(range(8*i+24, 8*i+29))), 'Volume':20} for i in range(1,10)}
+source_dict_b.update({'1':{'Vessel':(dilution_plate, [93,94]), 'Volume':20}})
+#source_dict_b = {k:{'Vessel':(dilution_plate, [v['Vessel'][1][0]+16]), 'Volume':v['Volume']} if k!='x' else v for k, v in source_dict_a.items()}
 
 def build_dispense_lists(source_dict, matrix):
     dispense_dict = {}
