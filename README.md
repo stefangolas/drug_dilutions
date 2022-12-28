@@ -4,7 +4,7 @@ This is a PyHamilton (Hamilton Microlab STAR) library for dispensing 2-fold seri
 </br>
 
 
-Made for "High-throughput Approaches to Uncover Synergistic Drug Combinations in Leukemia"
+Made for "High-throughput Approaches to Uncover Synergistic Drug Combinations in Leukemia" </br>
 Preprint here: https://www.biorxiv.org/content/10.1101/2022.11.29.518409v1
 
 ## Updated Script
