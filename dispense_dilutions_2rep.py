@@ -12,11 +12,13 @@ matrix_csv = 'drug_plate.csv'
 
 def read_matrix_from_csv(csvfile):
     matrix = np.genfromtxt(csvfile, delimiter=',', dtype='unicode')
-    matrix = np.rot90(matrix, 1)
+    #matrix = np.rot90(matrix, 1)
     return matrix
 
 matrix_a = read_matrix_from_csv('drug_a_plate.csv')
 matrix_b = read_matrix_from_csv('drug_b_plate.csv')
+dilutions = read_matrix_from_csv('drug_dilutions.csv')
+
 
 drug_dict = {}
 well_idx = 0
@@ -26,7 +28,6 @@ with open('drug_source.csv', newline='') as csvfile:
         if row[1]:
             drug_dict.update({row[1]:well_idx})
         well_idx += 1
-
 
 
 source_dict_a = {'x': {'Vessel':(dilution_plate, [0,1,2,3,4,5,6,7]),
@@ -126,7 +127,6 @@ def columnwise_dispense_from_list(target_plate, source_plate, source_dict, dispe
     while not move_on_flag:
         for source_col in list_of_source_cols:
             aspirate_poss_list = [(source_plate, well) for well in source_col[0]]
-            print(aspirate_poss_list)
             active_col_dispense_lists = []
             for active_col in range(len(dispense_pos_list)//16):
                 active_source_list = list(source_col[1])
@@ -160,8 +160,8 @@ def columnwise_dispense_from_list(target_plate, source_plate, source_dict, dispe
                 list_of_dispense_series[matching_source_list][1] = list_of_dispense_series[matching_source_list][1] + dispense_series[1]
                         
         counter += 1       
-    print("accumulated")             
-    print(len(accumulated))
+    #print("accumulated")             
+    #print(len(accumulated))
     for l in range(len(list_of_dispense_series)):
         reduced_dispense_series = []
         for series in list_of_dispense_series[l][1]:
@@ -286,7 +286,7 @@ if __name__ == '__main__':
                 source_list = series[0]
                 source_list =  source_list + [None]*(8-len(source_list))
                 target_lists = series[1]
-                print(target_lists)
+                #print(target_lists)
                 vols_lists = [[vol if y else None for y in target_lists[i]] for i in range(len(target_lists))]
                 int_vols_lists = [[vol if y else 0 for y in target_lists[i]] for i in range(len(target_lists))] 
                 asp_vols = [min(max_vol, sum([vols[i] for vols in int_vols_lists])) if source_list[i] else None for i in range(8)]
