@@ -1,8 +1,10 @@
 # Drug dilutions
 <img src="https://github.com/stefangolas/drug_dilutions/blob/master/imgs/colors.png" width="320"/>
-This is a PyHamilton library for dispensing 2-fold serial dilutions of 2 different therapeutic drugs onto 384-well plates and then combining these into one 384-well plate with quad-pinning for combinatorial dosage screening. </br>
+This is a PyHamilton (Hamilton Microlab STAR) library for dispensing 2-fold serial dilutions of 2 different therapeutic drugs onto 384-well plates and then combining these into one 384-well plate with quad-pinning for combinatorial drug dosage screening. </br>
 </br>
 
+
+Made for "High-throughput Approaches to Uncover Synergistic Drug Combinations in Leukemia"
 Preprint here: https://www.biorxiv.org/content/10.1101/2022.11.29.518409v1
 
 ## Updated Script
