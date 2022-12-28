@@ -3,11 +3,11 @@
 This is a PyHamilton library for dispensing 2-fold serial dilutions of 2 different therapeutic drugs onto 384-well plates and then combining these into one 384-well plate with quad-pinning for combinatorial dosage screening. </br>
 </br>
 
-## Updated Example Code
+## Updated Script
 
 `robot_method.py` is an updated and heavily refactored script that provides classes and functions for creating your own optimized workflows using plate maps.
 
-## Original process.
+## Original Process
 
 1. The user runs the main script by running `py dispense_dilutions_2rep.py` with an optional `--make i j` flag where `i` and `j` represent source wells for concentrated drug reagent in a 96-well plate. If `--make i j` is passed then the robot will dispense from these two wells into the respective starting wells for each drug diluton series. If not, the script will assume the user has performed this step manually.</br>
 
